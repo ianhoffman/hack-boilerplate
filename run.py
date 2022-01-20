@@ -40,7 +40,7 @@ def main():
     args = parse_args()
 
     path = '{}/../{}'.format(os.getcwd(), args.project)
-    shutil.rmtree(path)
+    shutil.rmtree(path, ignore_errors=True)
     os.mkdir(path)
 
     composer_json = {
